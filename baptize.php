@@ -1,9 +1,8 @@
 <?php
 //INPUTS
-//$names = file('names.txt');
+
 $syllableFile = file('syllables.txt');
-//$generations = file('generations.txt');
-$json = file('example_json.txt');
+$json = file('example_json.txt'); //Currently needs a file in the same directory
 
 //POPULATE NAME START AND END ARRAYS
 function init($syllableFile) {
@@ -109,9 +108,5 @@ function main($syllableFile, $json) {
     }
     return $out;
 }
-
-echo '<pre>';
-print_r(main($syllableFile, $json));
-echo '</pre>';
 
 ?>
